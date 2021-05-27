@@ -18,7 +18,7 @@ export class SearchComponent implements OnInit {
       this.productData = res;
     });
   }
-
+  
   startSearch() {
     this.productDataFilter = [];
     this.error = false;
