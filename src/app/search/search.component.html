@@ -1,0 +1,10 @@
+    <div class="col-md-12">
+      <input type="text" class="form-control col-md-6"  [(ngModel)]="search" #ctrl="ngModel" required placeholder=" הזן שם חוק">
+      <input type="text" class="form-control col-md-6"  [(ngModel)]="numLow" #ctrl="ngModel" required placeholder="הזן מספר סעיף">
+    </div>
+    <div *ngIf="!productData">אנא המתן, נתונים נטענים....</div>
+    <button class="btn btn-outline-light" (click)="startSearch()">חפש</button>
+    <div *ngIf="error">לא נמצאו חוקים מושפעים מחקיקת או שינויי החוק הנ"ל</div>
+    <div class="card" *ngFor="let item of productDataFilter">
+      <div class="card-body">{{item}}</div>
+    </div>
